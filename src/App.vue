@@ -1,36 +1,24 @@
 <template>
   <div id="app">
+    <c-head></c-head>
     <c-login></c-login>
-    <!-- <img src="./assets/logo.png"> -->
-    <!-- <router-view/> -->
-    <!-- <div class="list">
-      <button @click="show=!show">button</button>
-        <h4 v-html="str" v-show="show">{{str}}</h4>
-      
-      <div class="title">
-        <span>影院热映</span><span class="more">更多</span>
-      </div>
-        <ul>
-          <li v-for="(items,index) in list" :key="index">
-            <img :src="items.cover" alt="">
-            <p>{{items.title}}</p>
-          </li>
-        </ul>
-
-
-    </div> -->
+    <c-footer></c-footer>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import cLogin from "./login.vue";
+import cHead from "./header.vue";
+import cFooter from "./footer.vue";
 
 export default {
   name: "app",
   
     components: {
     cLogin,
+    cHead,
+    cFooter,
   },
 data() {
     return {
@@ -61,14 +49,16 @@ data() {
   }
 };
 </script>
-<style lang="scss" scoped>
-@import "./assets/css/app.scss";
+<style>
+*{
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

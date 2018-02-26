@@ -1,0 +1,51 @@
+.footer{
+    background: #7c7c7c;
+    width: 100%;
+    .footer_container{
+        height: 125px;
+        padding: 15px 0 0;
+        .footer_list{
+            float: left;
+            margin-left: 100px;
+            color: #fff;
+            dl{
+                float: left;
+                margin-right: 50px;
+                text-align: left;
+                dd{
+                    line-height: 2;
+                    &.wechat{
+                        color: #dadada;
+                    }
+                    &.tel_tit{
+                        color: #ddd;
+                        font-size: 12px;
+                    }
+                    &.num{
+                        color:#ddd;
+                        font-weight: 700;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .download{
+            img{
+                width: 72px;
+            }
+            p{
+                color: #ddd;
+                font-size: 12px;
+            }
+        }
+    }
+    .copyright{
+        p{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #ddd;
+            font-size: 12px;
+        }
+    }
+}

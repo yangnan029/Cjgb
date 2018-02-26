@@ -1,76 +1,65 @@
-.login{
-    width: 100%;
-    border-top:1px solid #dadada;
-    .login_content{
+.main{
+    .main_container{
         width: 950px;
-        min-height: 705px;
         margin: 0 auto;
         .title{
             margin-top: 45px;
+            border-bottom: 1px solid #dadada;
             padding-bottom: 5px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #dadada;
+            text-align: left;
             span{
-                font-size: 20px;
                 color: #1b65ce;
-                padding: 5px 10px;
-                letter-spacing: 2px;
                 border-bottom: 2px solid #1b65ce;
+                letter-spacing: 3px;
+                padding: 5px 10px;
             }
         }
         .left{
-            width: 360px;
-            padding: 70px 140px 150px 30px;
+            width: 369px;
+            padding: 70px 140px 130px 30px;
             float: left;
             border-right: 1px solid #dadada;
-            .head{
+            h3{
                 padding: 15px 0 30px;
-                p{
-                    font-size: 20px;
-                    text-align: center;
-                    color: #333;
-                }  
+                font-size: 20px;
+                font-weight: normal;
             }
-            .row{
+            .rows{
+                width: 100%;
                 margin-bottom: 30px;
-                color: #333;
                 position: relative;
-                span{
-                    font-size: 15px;
+                    
+                .forget{
+                    position: absolute;
+                    right: -80px;
+                    height: 40px;
+                    line-height: 40px;
                 }
-                input{
+                input[type=text]{
                     height: 40px;
                     width: 270px;
                     padding-left: 20px;
                     margin-left: 10px;
-                    border: 1px solid #dddddd;
+                    border: 1px solid #ddd;
                     box-sizing: border-box;
                 }
-                button{
+                input[type=password]{
+                    height: 40px;
+                    width: 270px;
+                    padding-left: 20px;
+                    margin-left: 10px;
+                    border: 1px solid #ddd;
+                    box-sizing: border-box;
+                }
+                
+                input[type=button]{
                     width: 100%;
-                    padding: 8px 0;
                     background: #1b65ce;
-                    color: #ffffff;
-                    font-size: 18px;
+                    color: #fff;
+                    padding: 8px 0;
+                    font-size: 20px;
                     border: none;
-                }
-                .forget{
-                    position: absolute;
-                    width: 75px;
-                    top: 10px;
-                    right: -80px;
-                    span{
-                        a{
-                            color: #1b65ce;
-                            font-size: 15px;
-                        }
-                    }
-                }
-            }
-            .register{
-                text-align: center;
-                a{
-                    color: #1b65ce;
                 }
             }
         }
@@ -80,28 +69,31 @@
             padding-left: 60px;
             padding-top: 70px;
             p{
-                font-size: 16px;
+                text-align: left;
                 color: #1b65ce;
                 margin-bottom: 35px;
                 font-weight: 400;
             }
-            .row{
-                margin-bottom: 10px;
-                font-size: 14px;
-                color: #666;
-                padding-left: 20px;
+            ul{
+                li{
+                    margin-bottom: 10px;
+                    color: #666666;
+                    padding-left: 20px;
+                    font-size: 14px;
+                    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAMAAABlXnzoAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAATlBMVEUAAACZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZkAAACy0jMDAAAAGHRSTlMAkFoGXuZ+GAjr+KM1h8ce/bD5pDbnyAd4gMQGAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAE1JREFUCNdjYGRiZkACLBKsbOwILgenhAQXNw+czysBAnwwPfwCYD5cj6AEFED0wLlCwiIIxaIQxRCjxKBGiQMtEuIWQThDFNkZqI4EACMBBiJGmpbaAAAAAElFTkSuQmCC')no-repeat 0 center;
+                }
             }
             .img{
-                height: 135px;
                 margin-top: 50px;
-                color: #333;
+                height: 135px;
+                text-align: left;
                 img{
                     width: 135px;
-                    vertical-align: middle; 
+                    height: 135px;
+                    vertical-align: middle;
                 }
                 span{
                     font-size: 14px;
-                    color: #666;
                 }
             }
         }
