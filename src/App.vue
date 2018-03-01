@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <c-head></c-head>
-    <c-login></c-login>
+    <router-view/>
+    <!-- <c-login></c-login> -->
     <c-footer></c-footer>
+
   </div>
 </template>
 

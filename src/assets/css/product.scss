@@ -1,0 +1,345 @@
+.main{
+    background: #f0f4f7;
+    .main_container{
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px;
+        .lefts{
+            float: left;
+            width: 198px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            ul{
+                li{
+                    padding: 12px 0;
+                    text-align: left;
+                    a{
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        .rights{
+            display: inline-block;
+            width: 990px;
+            margin-left: 10px;
+            text-align: left;
+            background: #f0f4f7;
+            .top{
+                background: #fafafa;
+                border: 1px solid #ddd;
+                border-bottom: none;
+                ul{
+                    li{
+                        float: left;
+                        color: #1b65ce;
+                        width: 140px;
+                        padding: 10px 0;
+                        font-size: 18px;
+                        text-align: center;
+                        &:first-child{
+                            border-bottom: 1px solid #1b65ce;
+                        }
+                    }
+                }
+            }
+            .lists1{
+                margin-bottom: 20px;
+                background: #ffffff;
+                .titles{
+                    height: 80px;
+                    line-height: 80px;
+                   // margin-top: 20px;
+                    span{
+                        padding: 5px 15px;
+                        color: #ffffff;
+                        background: orange;
+                        font-size: 18px;
+                    }
+                }
+                .items{
+                    position: relative;
+                    padding: 20px 20px 0;
+                    border-bottom: 1px dotted #ddd;
+                    .tops{
+                        margin-bottom: 10px;
+                        p{
+                            height: 35px;
+                            line-height: 35px;
+                            padding-left: 30px;
+                            background: url('http://51jigoubao.com/static/img/product.fcc350f.png') no-repeat 0 center;
+                            a{
+                                margin-left: 10px;
+                                padding-bottom: 2px;
+                                font-size: 18px;
+                                color: #1b65ce;
+                                text-decoration: none;
+                                border-bottom: 1px dotted #1b65ce;
+                            }
+                        }
+                    }
+                    ul{
+                        li{
+                            float: left;
+                            width: 230px;
+                            border-right: 1px solid #ddd;
+                            height: 90px;
+                            &:last-child{
+                                border-right: none;
+                            }
+                            p{
+                                margin-left: 20px;
+                                line-height:1.5;
+                                font-size: 14px;
+                                &.info{
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                }
+                                &.number{
+                                    line-height: 30px;
+                                    color: #fb565c;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .btns{
+                        position: absolute;
+                        top: 8px;
+                        right: 40px;
+                        a{
+                            display: block;
+                            width: 110px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 4px 0;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            border: 1px solid #1b65ce;
+                            color: #1b65ce;
+                            text-align: center;
+                            &.open{
+                                color: #ffffff;
+                                background: #1b65ce;
+                            }
+                        }
+                    }
+                }
+            }
+            .lists2{
+                margin-bottom: 20px;
+                background: #ffffff;
+                .titles{
+                    height: 60px;
+                    line-height: 60px;
+                    margin-top: 20px;
+                    position: relative;
+                    span{
+                        padding: 5px 15px;
+                        color: #ffffff;
+                        background: #1b65ce;
+                        font-size: 18px;
+                        &.ques{
+                            position: absolute;
+                            top: 10px;
+                            right: 40px;
+                            width: 110px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 4px 0;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            border: 1px solid #1b65ce;
+                            background: #1b65ce;
+                            text-align: center;
+                            color: #ffffff;
+                            a{
+                                font-size: 16px;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+                .items{
+                    position: relative;
+                    padding: 20px 20px 0;
+                    border-bottom: 1px dotted #ddd;
+                    .tops{
+                        margin-bottom: 10px;
+                        p{
+                            height: 35px;
+                            line-height: 35px;
+                            padding-left: 30px;
+                            background: url('http://51jigoubao.com/static/img/product.fcc350f.png') no-repeat 0 center;
+                            a{
+                                margin-left: 10px;
+                                padding-bottom: 2px;
+                                font-size: 18px;
+                                color: #1b65ce;
+                                text-decoration: none;
+                                border-bottom: 1px dotted #1b65ce;
+                            }
+                        }
+                    }
+                    ul{
+                        li{
+                            float: left;
+                            width: 230px;
+                            border-right: 1px solid #ddd;
+                            height: 90px;
+                            &:last-child{
+                                border-right: none;
+                            }
+                            p{
+                                margin-left: 20px;
+                                line-height:1.5;
+                                font-size: 14px;
+                                &.info{
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                }
+                                &.number{
+                                    line-height: 30px;
+                                    color: #fb565c;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .btnn{
+                        position: absolute;
+                        right: 40px;
+                        bottom: 20px;
+                        a{
+                            display: block;
+                            width: 110px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 4px 0;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            border: 1px solid #1b65ce;
+                            color: #1b65ce;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .lists3{
+                margin-bottom: 20px;
+                background: #ffffff;
+                .titles{
+                    height: 60px;
+                    line-height: 60px;
+                    margin-top: 20px;
+                    position: relative;
+                    span{
+                        padding: 5px 15px;
+                        color: #ffffff;
+                        background: #fb565c;
+                        font-size: 18px;
+                        &.ques{
+                            position: absolute;
+                            top: 10px;
+                            right: 40px;
+                            background: #fff;
+                            color: #1b65ce;
+                            border: none;
+                            a{
+                                font-size: 16px;
+                                color: #1b65ce;
+                                border-bottom: 1px dotted #1b65ce;
+                            }
+                        }
+                    }
+                }
+                .items{
+                    position: relative;
+                    padding: 20px 20px 0;
+                    border-bottom: 1px dotted #ddd;
+                    .tops{
+                        margin-bottom: 10px;
+                        p{
+                            height: 35px;
+                            line-height: 35px;
+                            padding-left: 30px;
+                            background: url('http://51jigoubao.com/static/img/product.fcc350f.png') no-repeat 0 center;
+                            a{
+                                margin-left: 10px;
+                                padding-bottom: 2px;
+                                font-size: 18px;
+                                color: #1b65ce;
+                                text-decoration: none;
+                                border-bottom: 1px dotted #1b65ce;
+                            }
+                        }
+                    }
+                    ul{
+                        li{
+                            float: left;
+                            width: 230px;
+                            border-right: 1px solid #ddd;
+                            height: 90px;
+                            &:last-child{
+                                border-right: none;
+                            }
+                            p{
+                                margin-left: 20px;
+                                line-height:1.5;
+                                font-size: 14px;
+                                &.info{
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                }
+                                &.number{
+                                    line-height: 30px;
+                                    color: #fb565c;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .btnn{
+                        position: absolute;
+                        right: 40px;
+                        bottom: 20px;
+                        a{
+                            display: block;
+                            width: 110px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 4px 0;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            border: 1px solid #1b65ce;
+                            color: #1b65ce;
+                            text-align: center;
+                        }
+                    }
+                    .btns{
+                        position: absolute;
+                        top: 8px;
+                        right: 40px;
+                        a{
+                            display: block;
+                            width: 110px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 4px 0;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            border: 1px solid #1b65ce;
+                            color: #1b65ce;
+                            text-align: center;
+                            &.open{
+                                color: #ffffff;
+                                background: #1b65ce;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

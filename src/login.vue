@@ -51,9 +51,10 @@ export default {
 
   },
   created() {
-    console.log(JSON.parse(localStorage.getItem("userInfo")).organName)
-    this.getNumber();
-    console.log(this)
+    // console.log(JSON.parse(localStorage.getItem("userInfo")).organName)
+    // this.getNumber();
+    // console.log(this)
+
   },
   methods: {
       login(){
@@ -63,13 +64,30 @@ export default {
                 passwd:this.passwd
                 })
                 .then(function(res){
-                console.log(_self.telphone);
-                console.log(_self.passwd);
+                  console.log(res.data)
+                  if(res.data.status==1){
+                    // _self.getProList();
+                    _self.$router.push({path:'/product'})
+                  }
+                  else{
+                    alert("fail");
+                  }
                 })
                 .catch(function(err){
                 console.log(err);
                 });
-      }
+      },
+    getProList(){
+      
+           const _self=this;
+           axios.get('/jgb-web/v1/products')
+                .then(function(res){
+                  console.log(res)
+                })
+                .catch(function(err){
+                console.log(err);
+                });
+    }
   }
 };
 
