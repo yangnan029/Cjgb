@@ -16,6 +16,16 @@ export default new Router({
       path: '/product',
       name: 'product',
       component: resolve => require(["../product.vue"], resolve)
+    },
+    {
+      path: '/current',
+      name: 'current',
+      component: resolve => require(["../current.vue"], resolve)
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: resolve => require(["../help.vue"], resolve)
     }
   ]
 })

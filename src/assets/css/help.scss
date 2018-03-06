@@ -1,0 +1,68 @@
+.contain{
+    background: #f0f4f7;
+    padding-top:100px; 
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+        .left{
+            float: left;
+            width: 198px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            ul{
+                li{
+                    height: 55px;
+                    line-height: 55px;
+                    a{
+                        color: #333;
+                    }
+                    &.active{
+                        background: #fff;
+                        a{
+                            color:#1b65ce;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            float: left;
+            width: 990px;
+            //padding-left: 15px;
+            box-sizing: border-box;
+            background: #fff;
+            border: 1px solid #ddd;
+            text-align: left;
+            .title{
+                height: 41px;
+                border-bottom: 1px solid #ddd;
+                span{
+                    border-bottom: 2px solid #1b65ce;
+                    color: #1b65ce;
+                    padding: 10px;
+                    font-size: 16px;
+                    line-height: 41px;
+                }
+                
+            }
+            .help_list{
+                padding: 15px;
+                .name{
+                    height: 30px;
+                    background: #f0f4f7;
+                    margin-bottom: 5px;
+                    padding: 5px 0 0 10px;
+                }
+                .details{
+                    display: none;
+                    p{
+                        color: #666666;
+                        font-size: 16px;
+                        padding:10px 10px 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
