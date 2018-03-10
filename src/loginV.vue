@@ -7,14 +7,14 @@
       <div class="left">
         <h3>登录</h3>
         <div class="rows">
-          <span>手机号码：</span><input type="text"  id="phone">
+          <span>手机号码：</span><input type="text" v-model="telphone">
         </div>
         <div class="rows">
-          <span>登录密码：</span><input type="password"  id="password">
+          <span>登录密码：</span><input type="password" v-model="passwd" >
           <a href="#" class="forget">忘记密码？</a>
         </div>
         <div class="rows">
-          <input type="button" value="登录" @click="loginSec">
+          <input type="button" value="登录" v-on:click="login">
         </div>
         <div class="rows">
           <p>没有账号？
@@ -53,10 +53,6 @@ export default {
   },
   computed: {},
   created() {
-    // console.log(JSON.parse(localStorage.getItem("userInfo")).organName)
-    // this.getNumber();
-    // console.log(this)
-   // loginSec()
   },
   methods: {
     login() {

@@ -104,7 +104,7 @@ export default {
         const name= event.target;
         console.log($(name).text());
         $(name).closest("li").find('.details').toggle();
-        $(name).closest("li").siblings().find('.details').css("display","none");
+        $(name).closest("li").siblings().find('.details').hide("slow");
     }
   }
 };

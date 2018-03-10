@@ -11,11 +11,20 @@ export default new Router({
       path: '*',
       name: 'login',
       component: resolve => require(["../login.vue"], resolve)
+    },{
+      path: '/loginV',
+      name: 'loginV',
+      component: resolve => require(["../loginV.vue"], resolve)
     },
     {
       path: '/product',
       name: 'product',
       component: resolve => require(["../product.vue"], resolve)
+    },
+    {
+      path: '/productV',
+      name: 'productV',
+      component: resolve => require(["../productV.vue"], resolve)
     },
     {
       path: '/current',

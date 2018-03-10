@@ -15,45 +15,16 @@
         <div class="rights">
           <div class="top">
             <ul class="clearfix">
-              <li @click="showHuo" :class="{active:box1}">活期产品</li>
-              <li @click="showDing" :class="{active:!box1}">定期产品</li>
+              <li class="huobtn" @click="showHuos">活期产品</li>
+              <li class="dingbtn" @click="showDings">定期产品</li>
             </ul>
           </div>
-          <template v-if="box1">
+          <div class="huo">
 
             <div class="lists1">
               <div class="titles">
                 <span>券商资管</span>
               </div>
-              <div class="items" v-for="(items,index) in arr3" :key="'3'+index">
-                <div class="tops">
-                  <p>
-                    <a href="#">{{items.name}}</a>
-                  </p>
-                </div>
-                <ul class="clearfix">
-                  <li>
-                    <p class="info">七日年化收益率</p>
-                    <p class="number">{{(items.seventhYearYield*100).toFixed(2)}}%</p>
-                  </li>
-                  <li>
-                    <p class="info">万份收益</p>
-                    <p class="number">{{items.yieldPerMillion}}</p>
-                  </li>
-                  <li>
-                    <p>投资期限：每日申赎</p>
-                    <p>更新日期：2018.02.28</p>
-                    <p>爱心值：255/亿元（日终存量）</p>
-                  </li>
-
-                </ul>
-                <div class="btns">
-                  <a href="#">申购</a>
-                  <a href="#">赎回</a>
-                  <a href="#" class="open">开户</a>
-                </div>
-              </div>
-
             </div>
             <div class="lists2">
               <div class="titles">
@@ -62,32 +33,6 @@
                   <a href="#">
                     什么是期权？</a>
                 </span>
-              </div>
-              <div class="items" v-for="(items,index) in arr2" :key="'2'+index">
-                <div class="tops">
-                  <p>
-                    <a href="#">{{items.name}}</a>
-                  </p>
-                </div>
-                <ul class="clearfix">
-                  <li>
-                    <p class="info">七日年化收益率</p>
-                    <p class="number">{{items.seventhYearYield*100}}%</p>
-                  </li>
-                  <li>
-                    <p class="info">万份收益</p>
-                    <p class="number">{{items.yieldPerMillion}}元</p>
-                  </li>
-                  <li>
-                    <p>投资期限：每日申赎</p>
-                    <p>更新日期：2018.02.28</p>
-                    <p>爱心值：255/亿元（日终存量）</p>
-                  </li>
-
-                </ul>
-                <div class="btnn">
-                  <a href="javascript:void(0)" @click="changnei">场内确权</a>
-                </div>
               </div>
             </div>
             <div class="lists3">
@@ -98,105 +43,17 @@
                     长信开户</a>
                 </span>
               </div>
-              <div class="items" v-for="(items,index) in arr4" :key="'4'+index">
-                <div class="tops">
-                  <p>
-                    <a href="#">{{items.name}}</a>
-                  </p>
-                </div>
-                <ul class="clearfix">
-                  <li>
-                    <p class="info">七日年化收益率</p>
-                    <p class="number">{{items.seventhYearYield*100}}%</p>
-                  </li>
-                  <li>
-                    <p class="info">万份收益</p>
-                    <p class="number">{{items.yieldPerMillion}}元</p>
-                  </li>
-                  <li>
-                    <p>投资期限：每日申赎</p>
-                    <p>更新日期：2018.02.28</p>
-                    <p>爱心值：255/亿元（日终存量）</p>
-                  </li>
-
-                </ul>
-                <div class="btnn">
-                  <a href="#">场外确权</a>
-                </div>
-              </div>
-
-              <div class="items" v-for="(items,index) in arr1" :key="index">
-                <div class="tops">
-                  <p>
-                    <a href="#">{{items.name}}</a>
-                  </p>
-                </div>
-                <ul class="clearfix">
-                  <li>
-                    <p class="info">七日年化收益率</p>
-                    <p class="number">{{(items.seventhYearYield*100).toFixed(2)}}%</p>
-                  </li>
-                  <li>
-                    <p class="info">万份收益</p>
-                    <p class="number">{{items.yieldPerMillion}}</p>
-                  </li>
-                  <li>
-                    <p>投资期限：每日申赎</p>
-                    <p>更新日期：2018.02.28</p>
-                    <p>爱心值：255/亿元（日终存量）</p>
-                  </li>
-
-                </ul>
-                <div class="btns">
-                  <a href="#">申购</a>
-                  <a href="#">赎回</a>
-                  <a href="#" class="open">开户</a>
-                </div>
-              </div>
             </div>
-          </template>
-          <template v-if="!box1">
+          </div>
+          <div class="ding" style="display:none">
             <div class="lists5">
-              <template  v-for="(items,index) in arr3">
-              <div class="its clearfix" :key="'0'+index">
-                <div class="items" >
-                <div class="tops">
-                  <p>
-                    <a href="#">{{items.name}}</a>
-                  </p>
-                </div>
-                <ul class="clearfix">
-                  <li>
-                    <p class="info">预期报价收益率</p>
-                    <p class="number">{{(items.seventhYearYield*100).toFixed(2)}}%</p>
-                  </li>
-                  <li>
-                    <p class="info">期限</p>
-                    <p class="number">{{items.yieldPerMillion}}</p>
-                  </li>
-                  <li>
-                    <p>资金追加日：每日申赎</p>
-                    <p>产品计息日：2018.02.28</p>
-                  </li>
-                  <li>
-                    <p>产品到期日：每日申赎</p>
-                    <p>资金到账日：2018.02.28</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="radius" :key="'1'+index">
-                <p>爱心值:300/亿元（日终存量）</p>
-                <span>已结束</span>
-              </div>
-              </div>
-              </template>
             </div>
-          </template>
+          </div>
 
         </div>
       </div>
     </div>
-    <div class="upPages" v-show="box">
+    <div class="upPages" style="display:none">
       <div class="shows">
         <span class="del" @click="dels">x</span>
         <div class="showsIcon">
@@ -208,6 +65,7 @@
 </template>
 <script>
 import axios from "axios";
+import $ from "jquery";
 
 export default {
   name: "product",
@@ -226,63 +84,89 @@ export default {
   beforeCreate() {},
   created() {
     // console.log(JSON.parse(localStorage.getItem("userInfo")).organName)
-    this.getProList();
-    console.log(this);
+    //this.getProList();
+    //console.log(this);
+    this.getProListSec();
+
   },
   beforeMount() {},
   methods: {
-    getProList() {
-      const _self = this;
-      axios
-        .get("/jgb-web/v1/products")
-        .then(function(res) {
-          if (res.data.status) {
-            const data = res.data.data;
-            const arr4 = data.filter(item => {
-              return item.issueId === 1;
-            });
-            let arr1 = [];
-            let arr2 = [];
-            let arr3 = [];
-            for (let index = 0; index < data.length; index++) {
-              if (data[index].issueId === 2) {
-                arr1.push(data[index]);
-              } else if (data[index].issueId === 3) {
-                arr2.push(data[index]);
-              } else if (data[index].issueId === 4) {
-                arr3.push(data[index]);
-              }
-            }
-           
-            _self.arr3 = arr3;
-            _self.arr2 = arr2;
-            _self.arr4 = arr4;
-            _self.arr1 = arr1;
-            _self.productList = res.data.data;
-          } else {
-            alert("未登录");
-          }
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
+
+    showHuos(){
+      $('.ding').hide();
+      $('.huo').show();
+    },
+    showDings(){
+      $('.ding').show();
+      $('.huo').hide();
     },
     changnei() {
-      this.box = true;
+      $('.upPages').show();
     },
     dels() {
-      this.box = false;
-    },
-    showDing(){
-      this.box1=false;
-    },
-    showHuo(){
-      this.box1=true;
+      $('.upPages').hide();
+    },    
+    getProListSec(){
+      const _self=this;
+      console.log(_self);
+      $.ajax({
+        type:'get',
+        contentType: "application/json",
+        url: "/jgb-web/v1/products",
+        //data: JSON.stringify(data),
+        success: function(resp){
+          console.log(resp.data);
+          //console.log(resp.data.organName)
+          // _self.$router.push({ path: "/product" });
+          var arr1=[];
+          var arr2=[];
+          var arr3=[];
+          var arr4=[];
+          // console.log(resp.data.issueId);
+          for(var i=0;i<resp.data.length;i++){
+            if(resp.data[i].issueId==1){
+              arr1.push(resp.data[i]);
+            }
+            else if(resp.data[i].issueId==2){
+              arr2.push(resp.data[i]);
+            }else if(resp.data[i].issueId==3){
+              arr3.push(resp.data[i]);
+            }else if(resp.data[i].issueId==4){
+              arr4.push(resp.data[i]);
+            }
+          }
+
+          var html1='';
+          for (let index = 0; index < arr1.length; index++) {
+            html1+='<div class=\'items\'><div class=\'tops\'><p><a href=\'#\'>'+arr1[index].name+'</a></p></div><ul class=\'clearfix\'><li><p class=\'info\'>七日年化收益率</p><p class=\'number\'>'+(arr1[index].seventhYearYield*100).toFixed(2)+'%</p></li><li><p class=\'info\'>万份收益</p><p class=\'number\'>'+arr1[index].yieldPerMillion+'</p></li><li><p>投资期限：每日申赎</p><p>更新日期：2018.02.28</p><p>爱心值：255/亿元（日终存量）</p></li></ul><div class=\'btns\'><a href=\'#\'>申购</a><a href=\'#\'>赎回</a><a href=\'#\' class=\'open\'>开户</a></div></div>';
+          }
+          var html2='';
+          for (let index = 0; index < arr2.length; index++) {
+            html2+='<div class=\'items\'><div class=\'tops\'><p><a href=\'#\'>'+arr2[index].name+'</a></p></div><ul class=\'clearfix\'><li><p class=\'info\'>七日年化收益率</p><p class=\'number\'>'+(arr2[index].seventhYearYield*100).toFixed(2)+'%</p></li><li><p class=\'info\'>万份收益</p><p class=\'number\'>'+arr2[index].yieldPerMillion+'</p></li><li><p>投资期限：每日申赎</p><p>更新日期：2018.02.28</p><p>爱心值：255/亿元（日终存量）</p></li></ul><div class="btnn"><a href="javascript:void(0)" @click="changnei">场内确权</a></div></div>';
+          }
+          var html3='';
+          for (let index = 0; index < arr3.length; index++) {
+            html3+='<div class=\'items\'><div class=\'tops\'><p><a href=\'#\'>'+arr3[index].name+'</a></p></div><ul class=\'clearfix\'><li><p class=\'info\'>七日年化收益率</p><p class=\'number\'>'+(arr3[index].seventhYearYield*100).toFixed(2)+'%</p></li><li><p class=\'info\'>万份收益</p><p class=\'number\'>'+arr3[index].yieldPerMillion+'</p></li><li><p>投资期限：每日申赎</p><p>更新日期：2018.02.28</p><p>爱心值：255/亿元（日终存量）</p></li></ul><div class="btnn"><a href="javascript:void(0)" @click="changnei">场外确权</a></div></div>';
+          }
+          var html4='';
+          for (let index = 0; index < arr4.length; index++) {
+            html4+='<div><div class=\'its clearfix\'><div class=\'items\' ><div class=\'tops\'><p><a href=\'#\'>'+arr4[index].name+'</a></p></div><ul class=\'clearfix\'><li><p class=\'info\'>预期报价收益率</p><p class=\'number\'>'+(arr4[index].seventhYearYield*100).toFixed(2)+'%</p></li><li><p class=\'info\'>期限</p><p class=\'number\'>'+arr4[index].yieldPerMillion+'</p></li><li><p>资金追加日：每日申赎</p><p>产品计息日：2018.02.28</p></li><li><p>产品到期日：每日申赎</p><p>资金到账日：2018.02.28</p></li></ul></div><div class=\'radius\'><p>爱心值:300/亿元（日终存量）</p><span>已结束</span></div></div></div>';
+           }
+          $('.lists1').append(html1);
+          $('.lists2').append(html2);
+          $('.lists3').append(html3);
+          $('.lists5').append(html4);
+        }, 
+        error: function(error){
+          console.log(error)
+        }
+      });
     }
+    
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "./assets/css/common.scss";
 @import "./assets/css/login.scss";
 @import "./assets/css/product.scss";
