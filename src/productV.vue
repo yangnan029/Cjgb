@@ -2,16 +2,6 @@
   <div class="total">
     <div class="main">
       <div class="main_container clearfix">
-        <div class="lefts">
-          <ul>
-            <li>
-              <a href="#">我的资产</a>
-            </li>
-            <li>
-              <a href="#">产品列表</a>
-            </li>
-          </ul>
-        </div>
         <div class="rights">
           <div class="top">
             <ul class="clearfix">
@@ -28,7 +18,7 @@
               <div class="items" v-for="(items,index) in arr3" :key="'3'+index">
                 <div class="tops">
                   <p>
-                    <a href="#">{{items.name}}</a>
+                    <a href="#">{{items.name.replace('华信','随便')}}</a>
                   </p>
                 </div>
                 <ul class="clearfix">
@@ -155,11 +145,11 @@
               </div>
             </div>
           </div>
-         <div v-if="!box1" class="ding">
+          <div v-if="!box1" class="ding">
             <div class="lists5">
-               <div  v-for="(items,index) in arr3" :key="index">
+              <div v-for="(items,index) in arr3" :key="index">
                 <div class="its clearfix" :key="'0'+index">
-                  <div class="items" >
+                  <div class="items">
                     <div class="tops">
                       <p>
                         <a href="#">{{items.name}}</a>
@@ -197,17 +187,18 @@
       </div>
     </div>
     <div class="upPages" v-show="box">
-      <div class="shows">  
+      <div class="shows">
         <div class="titles">
           <span>场内确权</span>
           <span class="del" @click="dels">x</span>
         </div>
         <div class="contents">
-            
+
           <p>每个股东账户只需确权一次，新的股东账户交易请再确权一次。（确权请在首次交易后即刻进行）</p>
           <div class="showsIcon">
             <div class="rows">
-              <label for="pro_name">选择产品：<button class="pro_name">{{productName}}</button></label>
+              <label for="pro_name">选择产品：<button class="pro_name">{{productName}}</button>
+              </label>
             </div>
             <div class="rows">
               <label for="money">申购金额：<input type="text" class="money"></label>
@@ -220,10 +211,14 @@
             </div>
           </div>
           <div class="sure_btn clearfix">
-            <button class="sure">确权</button><button class="cancel" @click="dels">取消</button>
+            <button class="sure">确权</button>
+            <button class="cancel" @click="dels">取消</button>
           </div>
-          <p class="points">注：请贵公司于当日15:00前在<span>场内交易系统</span></p>
-          <p class="points2"><span>长信利息收益B（519598）</span>交易</p>
+          <p class="points">注：请贵公司于当日15:00前在
+            <span>场内交易系统</span>
+          </p>
+          <p class="points2">
+            <span>长信利息收益B（519598）</span>交易</p>
         </div>
       </div>
     </div>
@@ -241,8 +236,8 @@ export default {
       arr4: [],
       arr1: [],
       box: false,
-      box1:true,
-      productName:""
+      box1: true,
+      productName: ""
     };
   },
   computed: {},
@@ -276,7 +271,7 @@ export default {
                 arr3.push(data[index]);
               }
             }
-           
+
             _self.arr3 = arr3;
             _self.arr2 = arr2;
             _self.arr4 = arr4;
@@ -291,25 +286,25 @@ export default {
         });
     },
     changnei(name) {
-      console.log('123123123');
-this.productName=name;
+      console.log("123123123");
+      this.productName = name;
       this.box = true;
     },
     dels() {
       this.box = false;
     },
-    showDing(){
-      this.box1=false;
+    showDing() {
+      this.box1 = false;
     },
-    showHuo(){
-      this.box1=true;
-    },
+    showHuo() {
+      this.box1 = true;
+    }
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 @import "./assets/css/common.scss";
-@import "./assets/css/login.scss";
+//@import "./assets/css/login.scss";
 @import "./assets/css/product.scss";
 .row {
   background: url("./assets/images/common/arrow.png") no-repeat 0;

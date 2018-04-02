@@ -57,6 +57,18 @@ export default {
   methods: {
     login() {
       const _self = this;
+      const reg=/^1[3|4|5|8][0-9]\d{4,8}$/;
+
+      if(_self.telphone==""){
+        alert('用户名不能为空')
+        return false;
+      }else if(!reg.test(_self.telphone)){
+         alert('电话号码格式不正确')
+        return false;
+      }else if(_self.passwd==""){
+        alert('密码不能为空')
+        return false;
+      }
       axios
         .post("/jgb-web/v1/organ/login", {
           telphone: this.telphone,
@@ -66,7 +78,10 @@ export default {
           console.log(res.data);
           if (res.data.status == 1) {
             // _self.getProList();
-            _self.$router.push({ path: "/product" });
+            window.localStorage.setItem("logined", true);
+            window.localStorage.setItem("userInfo", JSON.stringify(res.data));
+            
+            _self.$router.push({ path: "/account" });
           } else {
             alert("fail");
           }

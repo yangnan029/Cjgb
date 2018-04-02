@@ -4,23 +4,8 @@
     .main_container{
         width: 1200px;
         margin: 0 auto;
-        padding-top: 50px;
-        .lefts{
-            float: left;
-            width: 198px;
-            text-align: center;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            ul{
-                li{
-                    padding: 12px 0;
-                    text-align: left;
-                    a{
-                        color: #000000;
-                    }
-                }
-            }
-        }
+        // padding-top: 50px;
+        
         .rights{
             display: inline-block;
             width: 990px;

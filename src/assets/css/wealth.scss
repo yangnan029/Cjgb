@@ -1,0 +1,185 @@
+.main{
+    // display: none;
+    background: #f0f4f7;
+    .main_container{
+        width: 1200px;
+        margin: 0 auto;
+        // padding-top: 50px;
+        
+        .rights{
+            display: inline-block;
+            width: 990px;
+            margin-left: 10px;
+            text-align: left;
+            background: #f0f4f7;
+            .top{
+                background: #ffffff;
+                border: 1px solid #ddd;
+                // border-bottom: none;ss
+                height: 270px;
+            }
+            .sec{
+                background: #ffffff;
+                border: 1px solid #ddd;
+                margin-top: 20px;
+                table{
+                    width: 100%;
+                    text-align: center;
+                    border-collapse:collapse;
+                    thead{
+                        tr{
+                            td{
+                                padding: 14px 0 7px;
+                                font-size: 20px;
+                                border-right: 1px solid #ddd;
+                                border-bottom: 1px solid #ddd;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                padding: 30px;
+                                font-size: 30px;
+                                color: #fb565c;
+                                border-right: 1px solid #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+            .sec_des{
+                margin: 5px 0 0;
+                text-align: right;
+                color: #333;
+                font-size: 12px;
+            }
+            .bottom{
+                margin: 10px 0 20px;
+                .titles{
+                    height: 35px;
+                    color: #333;
+                    p{
+                        padding-left: 10px;
+                        border-left: 2px solid #1b65ce;
+                        font-size: 20px;
+                        span{
+                            margin-left: 10px;
+                            color: #fb565c;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .bottom_lists{
+                    background: #fff;
+                    ul{
+                        li{
+                            &.active{
+                                .items{
+                                    display: block;
+                                }
+                            }
+                            .name{
+                                border-bottom: 1px solid #ddd;
+                                position: relative;
+                                height: 35px;
+                                vertical-align: middle;
+                                span{
+                                    color: #1b65ce;
+                                    font-size: 18px;
+                                    padding-left: 10px;
+                                    // vertical-align: middle;
+                                    line-height: 35px;
+                                }
+                                a{
+                                    vertical-align: middle;
+                                    float: right;
+                                    display: inline-block;
+                                    text-align: center;
+                                    margin-right: 20px;
+                                    margin-top: 2px;
+                                    width: 80px;
+                                    padding: 2px;
+                                    font-size: 16px;
+                                    color: #1b65ce;
+                                    border: 1px solid #1b65ce;
+                                    border-radius: 5px;
+                                }
+                            }
+                            .items{
+                                display: none;
+                                position: relative;
+                                padding: 20px;
+                                background: #ffffff;
+                                border-bottom: 1px dotted #ddd;
+                                .tops{
+                                    margin-bottom: 10px;
+                                    p{
+                                        height: 35px;
+                                        line-height: 35px;
+                                        padding-left: 30px;
+                                        background: url('http://51jigoubao.com/static/img/product.fcc350f.png') no-repeat 0 center;
+                                        a{
+                                            margin-left: 10px;
+                                            padding-bottom: 2px;
+                                            font-size: 18px;
+                                            color: #1b65ce;
+                                            text-decoration: none;
+                                            border-bottom: 1px dotted #1b65ce;
+                                        }
+                                    }
+                                }
+                                ul{
+                                    li{
+                                        float: left;
+                                        width: 190px;
+                                        border-right: 1px solid #ddd;
+                                        &:last-child{
+                                            border-right: none;
+                                        }
+                                        p{
+                                            margin-left: 20px;
+                                            line-height:1.5;
+                                            font-size: 14px;
+                                            &.info{
+                                                font-size: 14px;
+                                                line-height: 30px;
+                                            }
+                                            &.number{
+                                                line-height: 30px;
+                                                color: #fb565c;
+                                                font-size: 20px;
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                }
+                                .btns{
+                                    position: absolute;
+                                    top: 35px;
+                                    right: 20px;
+                                    a{
+                                        display: block;
+                                        width: 90px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        padding: 4px 0;
+                                        border-radius: 8px;
+                                        margin-bottom: 10px;
+                                        border: 1px solid #1b65ce;
+                                        color: #1b65ce;
+                                        text-align: center;
+                                        &.active{
+                                            color: #ffffff;
+                                            background: #1b65ce;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.main{
+    // display: none;
+    background: #f0f4f7;
+    .main_container{
+        width: 1200px;
+        margin: 0 auto;
+        // padding-top: 50px;
+        
+        .rights{
+            display: inline-block;
+            width: 990px;
+            margin-left: 10px;
+            text-align: left;
+            background: #f0f4f7;
+            .top{
+                background: #ffffff;
+                border: 1px solid #ddd;
+                // border-bottom: none;ss
+                height: 270px;
+            }
+            .bottom{
+                margin-top: 20px;
+                table{
+                    border: 1px solid #ddd;
+                    width: 100%;
+                    text-align: center;
+                    background: #ffffff;
+                    border-collapse:collapse;
+                    thead{
+                        height: 38px;
+                        tr{
+                            
+                            height: 38px;
+                            line-height: 38px;
+                            td{
+                                color: #1b65ce;
+                                border-bottom: 1px solid #ddd;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            height: 48px;
+                            padding: 5px 0;
+                            &:nth-child(even){
+                                background: #f9f9f9;
+                            }
+                            td{
+                                border-bottom: 1px solid #ddd;
+                                color: #333;
+                                span{
+                                    font-size: 14px;
+                                }
+                                &.point{
+                                    color: red;
+                                }
+                                &.last{
+                                    text-align: left;
+                                }
+                        
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

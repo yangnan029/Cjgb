@@ -7,14 +7,14 @@
       <div class="left">
         <h3>登录</h3>
         <div class="rows">
-          <span>手机号码：</span><input type="text"  id="phone">
+          <span>手机号码：</span><input type="text" id="phone">
         </div>
         <div class="rows">
-          <span>登录密码：</span><input type="password"  id="password">
+          <span>登录密码：</span><input type="password" id="password">
           <a href="#" class="forget">忘记密码？</a>
         </div>
         <div class="rows">
-          <input type="button" value="登录" @click="loginSec">
+          <input type="button" value="登录" @click="login">
         </div>
         <div class="rows">
           <p>没有账号？
@@ -56,7 +56,7 @@ export default {
     // console.log(JSON.parse(localStorage.getItem("userInfo")).organName)
     // this.getNumber();
     // console.log(this)
-   // loginSec()
+    // loginSec()
   },
   methods: {
     login() {
@@ -69,6 +69,8 @@ export default {
         .then(function(res) {
           console.log(res.data);
           if (res.data.status == 1) {
+            window.localStorage.setItem("logined", true);
+            window.localStorage.setItem("userInfo", JSON.stringify(res.data));
             // _self.getProList();
             _self.$router.push({ path: "/product" });
           } else {
@@ -91,20 +93,22 @@ export default {
         });
     },
     loginSec() {
-      const _self=this;
-      const data={telphone:$("#phone").val(),passwd:$('#password').val()};
+      const _self = this;
+      const data = {
+        telphone: $("#phone").val(),
+        passwd: $("#password").val()
+      };
       $.ajax({
-        type:'post',
+        type: "post",
         contentType: "application/json",
         url: "/jgb-web/v1/organ/login",
         data: JSON.stringify(data),
-        success: function(resp){
-          console.log(resp.data.organName)
-            _self.$router.push({ path: "/product" });
-          
-        }, 
-        error: function(error){
-          console.log(error)
+        success: function(resp) {
+          console.log(resp.data.organName);
+          _self.$router.push({ path: "/product" });
+        },
+        error: function(error) {
+          console.log(error);
         }
       });
     }

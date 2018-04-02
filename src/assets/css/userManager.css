@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: '';
+  clear: both;
+}
+.container .title .logo {
+  float: left;
+  width: 170px;
+}
+.container .title .logo img {
+  margin: 5px 27px;
+}
+.container .title .icons {
+  float: right;
+  margin-right: 20px;
+}
+.container .title .icons span {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+}
+.container .title .icons span img {
+  width: 38px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.container .left {
+  display: inline-block;
+  width: 170px;
+  background: #2a3542;
+  text-align: center;
+}
+.container .left ul li {
+  width: 150px;
+  margin: 0 auto;
+}
+.container .left ul li dl dt {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  color: #ababab;
+  font-size: 12px;
+}
+.container .left ul li dl dt i {
+  vertical-align: middle;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url('../images/search.png');
+}
+.container .left ul li dl dt.active {
+  color: #ffffff;
+  background: #35404d;
+}
+.container .left ul li dl dd {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  color: #ababab;
+  font-size: 12px;
+}
+.container .left ul li dl dd.active {
+  background: #35404d;
+  color: red;
+}
+.container .right {
+  background: #eef1f5;
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
+  padding-left: 20px;
+}
+.container .right .right_tit {
+  height: 55px;
+  line-height: 55px;
+}
+.container .right .right_tit span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.container .right .right_tit button {
+  float: right;
+  background: orange;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.container .right .searchs {
+  height: 40px;
+  line-height: 40px;
+  background: #6f86a4;
+}
+.container .right .searchs ul li {
+  display: inline-block;
+  margin: 0 20px;
+  color: #ffffff;
+  font-size: 14px;
+}
+.container .right .searchs ul li:last-child {
+  float: right;
+}
+.container .right .searchs ul li:last-child .search_dock {
+  border-radius: 5px;
+  background: #506b8f;
+}
+.container .right .searchs ul li:last-child .search_dock input {
+  background: #506b8f;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-right: 50px;
+  font-size: 12px;
+  border: none;
+}
+.container .right .searchs ul li:last-child .search_dock i {
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background: url('../images/search_btn.png');
+}
+.container .right .shows {
+  background: #ffffff;
+}
+.container .right .shows table {
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.container .right .shows table thead tr td {
+  border: 1px solid #ddd;
+}
+.container .right .shows table tbody tr td {
+  border: 1px solid #ddd;
+}
+.container .right .shows .bottoms span {
+  color: #797979;
+  font-size: 12px;
+}
+.container .right .shows .bottoms .yema {
+  float: right;
+}
+.container .right .shows .bottoms .yema span {
+  border: 1px solid #ddd;
+  padding: 0 5px;
+}
+.container .right .shows .bottoms .yema span.point {
+  border: none;
+}
+.upPages {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.upPages .box {
+  position: absolute;
+  width: 630px;
+  height: 380px;
+  left: 50%;
+  top: 50%;
+  margin-left: -315px;
+  margin-top: -190px;
+  background: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+}
+.upPages .box .top {
+  height: 55px;
+  line-height: 55px;
+  background: #7087a3;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.upPages .box .top .title {
+  float: left;
+  margin-left: 20px;
+}
+.upPages .box .top .del {
+  float: right;
+  margin-right: 20px;
+}
+.upPages .box .forms {
+  text-align: left;
+  width: 480px;
+  margin: 35px auto 15px;
+}
+.upPages .box .forms .row {
+  margin-bottom: 20px;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+}
+.upPages .box .forms .row input {
+  float: right;
+  width: 395px;
+  height: 30px;
+  line-height: 30px;
+}
+.upPages .box .forms .row:last-child {
+  margin-bottom: 35px;
+}
+.upPages .box .btns {
+  text-align: right;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.upPages .box .btns button {
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+}
+.upPages .box .btns button.sure {
+  margin: 0 20px;
+  background: orange;
+}
